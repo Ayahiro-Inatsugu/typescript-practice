@@ -1,0 +1,25 @@
+webpack.config.jsについて
+  entry: ./src/index.tsをエントリーポイントに設定
+  output: output先のパスとファイル名を設定
+  mode: development/productionを設定 developmentの場合はソースマップを出力 productionの場合は圧縮
+  resolve: importする際に拡張子を省略できるように設定
+  module: ローダーを設定
+    rules: ローダーの設定
+      test: 対象となるファイルの拡張子
+      use: 使用するローダー
+        loader: 使用するローダー名
+        options: ローダーに渡すオプション
+  
+
+コマンド一覧
+npm init -y //package.json作成
+node -v //nodeのバージョン確認
+npm i -D typescript //typescriptのインストール
+npx tsc -v //typescriptのバージョン確認
+npx tsc ?.ts //コンパイル
+node ?.js //実行
+npm i -D webpack webpack-cli //webpackのインストール
+npm i -D webpack-dev-server //webpack-dev-serverのインストール
+npm i -D ts-loader //ts-loaderのインストール
+npm start //サーバー立ち上げ
+npm run build //ビルド
